@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "RealityScan": {
+      "command": "C:\\path\\to\\MCP-RealityScan\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "realityscan_mcp"],
+      "env": {
+        "REALITYSCAN_EXE": "C:\\Program Files\\Epic Games\\RealityScan_2.2\\RealityScan.exe"
+      }
+    }
+  }
+}

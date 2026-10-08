@@ -1,0 +1,16 @@
+[project]
+name = "realityscan-mcp"
+version = "0.2.0"
+description = "MCP server driving RealityScan 2.x (formerly RealityCapture) headless CLI for IVAR Studios photogrammetry work"
+requires-python = ">=3.10"
+dependencies = ["mcp>=1.2"]
+
+[project.scripts]
+realityscan-mcp = "realityscan_mcp.server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
