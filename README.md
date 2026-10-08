@@ -16,9 +16,10 @@ and take over.
 ## Requirements
 
 - Windows 10 or 11.
-- **RealityScan 2.x**, installed from the Epic Games launcher. **Open it once in the GUI and log
-  in** under the Windows user that will run the MCP server. Headless runs reuse that cached login,
-  and without it they fail with unclear errors.
+- **RealityScan 2.x**, installed from the Epic Games launcher, with a licence that covers you (see
+  [RealityScan licence](#realityscan-licence)). **Open it once in the GUI and log in** under the
+  Windows user that will run the MCP server. Headless runs reuse that cached login, and without it
+  they fail with unclear errors.
 - **Python 3.10 or newer** on `PATH`. A per-user install from python.org is enough.
 - An MCP client: the Claude desktop app, Claude Code, or another client that starts stdio servers.
 
@@ -147,6 +148,22 @@ machine before you use it.
   `-export…` or `-execRSCMD`, goes to RealityScan unchanged. The whitelist only rejects unknown
   command names, and `validate=false` skips that check.
 - No network listener is involved. The client starts the server as a stdio subprocess.
+
+## RealityScan licence
+
+This project contains no RealityScan code and doesn't include, unlock or bypass a RealityScan
+licence. It drives your own installed copy through the documented command-line interface, so the
+[RealityScan EULA](https://www.realityscan.com/eula) applies to everything it runs.
+
+- **Everyone who uses RealityScan through this server needs to be licensed.** RealityScan is free
+  for individuals and companies with less than USD 1 million gross revenue over the last 12 months,
+  and for education and non-commercial use. Above that, each person who uses it needs a paid seat.
+  An MCP client driving RealityScan doesn't change that: the seat belongs to the person whose Epic
+  account runs it. See [realityscan.com/license](https://www.realityscan.com/license).
+- **Don't offer RealityScan to others through this server.** The EULA doesn't allow letting third
+  parties use RealityScan, or making it available as a hosted, software-as-a-service or
+  service-bureau offering. Run the server for yourself or your own licensed team, and don't expose
+  it so that other people can process data on your installation.
 
 ## How the CLI takes settings
 
